@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>QUIZ COMPITATION</title>
+        <style>
+            div{
+                margin:0%;
+                height: 100px;
+                border: 3px solid violet;
+            }
+            p{
+                color: rgb(0, 0, 255);
+                font-size: larger;
+            }
+            body{
+                background-image:linear-gradient(to right,rgba(235, 96, 9, 0.796),rgba(253, 10, 10, 0.025),green);
+        </style>
+    </head>
+    <body>
+        <h1>ANSWER ALL QUIZ QUESTIONS ......EACH QUESTION CARRIES 2 MARKS</h1>
+        <p >DONT TRY TO ANSWER MORE THEN ONE OPTION..</p>
+        <form><table>
+           <tr><td><label id="que">QUESTION NO 1:WHICH IS CAPITAL OF INDIA ?
+            </label></td></tr>
+            <tr><td><div id="wrong">
+            <input type="radio" id="q1" value="GUJARAT">GUJARAT </div></td></tr>
+            <tr><td><div id="ans">
+                <input type="radio" id="q2" value="delhi">NEW DELHI </div></td></tr>
+            <tr><td><div id="wrong">
+            <input type="radio" id="q3" value="BANGALORE">BANGALORE </div></td></tr>
+            <tr><td><div id="wrong">
+            <input type="radio" id="q4" value="HYDRABED">HYDRABED </div></td></tr>
+            <tr><td> <label id="que">QUESTION NO 2:WHICH IS CORRECT RELATED ONE TO INDIA ?
+             </label></td></tr>
+             <tr><td><div id="wrong">
+             <input type="radio" id="p1" value="sea">RED SEA,ARABIAN SEA,INDIAN OCEAN </div></td></tr>
+            <tr><td><div id="wrong">
+             <input type="radio" id="p2" value="sea"> BAY OF BENGAL,PASUFIC OCEAN,INDIAN OCEAN  </div></td></tr>
+            <tr><td><div id="wrong">
+             <input type="radio" id="p3" value="sea">ATLANDIC OCEAN,RED SEA,INDIAN OCEAN </div></td></tr>
+            <tr><td><div id="ans2">
+             <input type="radio" id="p4" value="sea">BAY OF BENGAL,ARABIAN SEA,INDIAN OCEAN  </div></td></tr>
+             <tr><td><input type="submit" id="submit"  onclick="val();" value="Submit the QUIZ..."
+ style="height:50px"> </td> </tr>
+         </table></form>
+         var h='<div id="de" onclick="dee();"> </div> ';   
+    <script>
+        function dee(){
+            document.getElementById("ans").style.backgroundColor="green";
+            document.getElementById("ans2").style.backgroundColor="green";
+        }
+        var score=0;
+        function val(){
+        if(q2.checked==true && q1.checked==false && q3.checked==false && q4.checked==false){
+            alert("EXCELLENT ....YOU ARE RIGHT WITH QUESTION 1");
+            score=score+2;
+        }
+        if(q1.checked==true || q3.checked==true|| q4.checked==true){
+                var que1=1;}
+        if(p4.checked==true && p1.checked==false && p3.checked==false && p2.checked==false){
+            alert("EXCELLENT ....YOU ARE RIGHT WITH QUESTION 2");
+          score=score+2;
+        }
+        if(p1.checked==true || p3.checked==true|| p2.checked==true)
+                var que2=1;
+        if(que1==1){
+            alert(" QUESTION 1 IS WRONG .......ANSWER FOR FIRST QUESTION IS NEW DELHI...");
+        }
+        if(que2==1){
+            alert("QUESTION 2 IS WRONG .......ANSWER FOR SECOND QUESTION IS BAY OF BENGAL,ARABIAN SEA,INDIAN OCEAN...");
+        }
+        alert("THANKYOU FOR ATTENDING THE QUIZ................  ... .... ... ... ... >  .  > YOUR TOTAL SCORE IS "+score);
+        document.getElementById("de").innerHTML="CLICK HERE TO GET ANSWER.. NOTE: SEE ANSWER ONCE YOU SUBMITED YOUR QUIZ ATLEAST ONCE"
+        } 
+        
+    </script>
+    document.getElementById("de").innerHTML="CLICK HERE TO GET ANSWER.. NOTE: SEE ANSWER ONCE YOU SUBMITED YOUR QUIZ ATLEAST ONCE"
+    </body>
+</html>
